@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff);
+    background-size: 300% 300%;
+    animation: rgbBackground 3s infinite;
+    overflow: hidden;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+@keyframes rgbBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #00ff00, 0 0 30px #0000ff;
+    }
+    to {
+        text-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff, 0 0 40px #ffff00;
+    }
+}
+
+h1 {
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+    animation: rgbText 2s infinite;
+}
+
+@keyframes rgbText {
+    0% { color: #ff0000; }
+    25% { color: #00ff00; }
+    50% { color: #0000ff; }
+    75% { color: #ff00ff; }
+    100% { color: #ffff00; }
+}
+
+p {
+    font-size: 24px;
+    margin: 20px 0;
+    animation: rgbText 2s infinite reverse;
+}
+
+.back-button {
+    padding: 15px 30px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #fff;
+    animation: buttonGlow 1s infinite alternate;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+@keyframes buttonGlow {
+    from {
+        box-shadow: 0 0 10px #ff0000, 0 0 20px #00ff00, 0 0 30px #0000ff;
+    }
+    to {
+        box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff, 0 0 40px #ffff00;
+    }
+}
